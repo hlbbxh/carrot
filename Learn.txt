@@ -1,8 +1,16 @@
-2019-03-24环境搭建
+2019-03-24
+环境搭建
 需要修改的配置文件：mysql 创建数据库 修改用户名和密码
 启动报错，说在本地仓库没有找到一个jar包
 去在本地找到该jar文件删除，重新下载即可
 启动类在/carrot/src/main/java/com/mtons/mblog/BootApplication.java
 修改eclipse的git提交弹窗  检索git 取消勾选的第一个即可
+
+
+2019-03-25
+启动类为BootAppliction 
+server:
+    port: 8080  为启动的端口号
+
 
 

@@ -10,7 +10,7 @@
     <![endif]-->
     <meta name="keywords" content="mtons, ${keywords?default(options['site_keywords'])}">
     <meta name="description" content="${description?default(options['site_description'])}">
-    <meta name="mtons:mblog" content="${site.version}">
+    <meta name="mtons:hlbbxh" content="${site.version}">
     ${options['site_metas']}
 
     <title>${title?default(options['site_name'])}</title>

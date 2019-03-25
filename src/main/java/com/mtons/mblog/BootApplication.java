@@ -17,6 +17,7 @@ public class BootApplication {
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(BootApplication.class, args);
         String serverPort = context.getEnvironment().getProperty("server.port");
+        //读取的是aplication.yml文件的端口号
         log.info("mblog started at http://localhost:" + serverPort);
     }
 
