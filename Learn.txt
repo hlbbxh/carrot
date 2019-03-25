@@ -8,9 +8,19 @@
 
 
 2019-03-25
+linux环境的部署
 启动类为BootAppliction 
 server:
     port: 8080  为启动的端口号
+打包的时候可能会提示少jar包 看日志 删除指定的jar包重新下载update
+打包必须是jdk不可以jre
+在linux使用java -jar ***.jar即可
+java -jar hlbbxh-8887.jar --site.controls.register=false  可以切换外部参数
+也可以指定外部配置文件
+
+
+
+
 
 
 
