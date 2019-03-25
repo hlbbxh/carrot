@@ -17,6 +17,10 @@ server:
 在linux使用java -jar ***.jar即可
 java -jar hlbbxh-8887.jar --site.controls.register=false  可以切换外部参数
 也可以指定外部配置文件
+nohup java -jar hlbbxh-8887.jar --site.controls.register=false &
+在后台启动 并传入参数    （先传入参数再在后面指定&）
+
+
 
 
 
