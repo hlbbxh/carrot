@@ -28,6 +28,7 @@ public class LoginController extends BaseController {
 
     /**
      * 跳转登录页
+     * 登录按钮是在这个请求里面跳转，跳转到的是login.ftl文件
      * @return
      */
 	@GetMapping(value = "/login")
