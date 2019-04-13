@@ -33,11 +33,13 @@ public class LoginController extends BaseController {
      */
 	@GetMapping(value = "/login")
 	public String view() {
+		System.out.println("跳转登录页面："+view(Views.LOGIN));
+		//  返回的是   ---> 跳转登录页面：/classic/auth/login
 		return view(Views.LOGIN);
 	}
 
     /**
-     * 提交登录
+     * 提交登录      登录之后处理的方法  在这里处理 使用到shiro框架  滚去learn
      * @param username
      * @param password
      * @param model
@@ -49,7 +51,6 @@ public class LoginController extends BaseController {
                         @RequestParam(value = "rememberMe",defaultValue = "0") Boolean rememberMe,
                         ModelMap model) {
 		String view = view(Views.LOGIN);
-
         Result<AccountProfile> result = executeLogin(username, password, rememberMe);
 
         if (result.isOk()) {
@@ -57,6 +58,7 @@ public class LoginController extends BaseController {
         } else {
             model.put("message", result.getMessage());
         }
+        System.out.println("账号："+username + "密码："+password + "跳转的路径："+ view);
         return view;
 	}
 
