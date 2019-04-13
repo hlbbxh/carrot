@@ -19,9 +19,13 @@
 <!--          =================================          -->
 <!--          ========  this is footer  =======          -->
 <!--          =================================          -->
+
+
 <a href="#" class="site-scroll-top">
     <i class="icon-arrow-up"></i>
 </a>
+
+<!--   这是实现了下拉到下面的时候会出现点击 移动到最上方   -->
 
 <script type="text/javascript">
     seajs.use('main', function (main) {
