@@ -28,7 +28,11 @@
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">
-                            登录 Use it
+                            快给我登录
+                       	<!-- 欢迎登录呦 -->
+                       	<!-- 欢迎登录呦 -->
+                       	<!-- 欢迎登录呦 -->
+                       	
                         </button>
                     </div>
                     <@controls name="register">
