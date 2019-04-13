@@ -21,7 +21,7 @@
 <!--          =================================          -->
 
 
-<a href="#" class="site-scroll-top">
+<a href="#" class="site-scroll-top" title="点击回到最上方">
     <i class="icon-arrow-up"></i>
 </a>
 
