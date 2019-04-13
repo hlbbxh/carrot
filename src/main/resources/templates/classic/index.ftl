@@ -30,6 +30,10 @@
 
 <!-- top/end -->
 
+<!--                默认主题下返回的 是这个index.frl文件                        -->
+<!--                默认主题下返回的 是这个index.frl文件                        -->
+<!--                默认主题下返回的 是这个index.frl文件                        -->
+
 <div class="row">
     <div class="col-xs-12 col-md-9 side-left">
         <div class="posts">
