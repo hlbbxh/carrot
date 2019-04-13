@@ -18,7 +18,11 @@
                     </div>
                     <div class="form-group">
                         <button id="ajax_login_submit" class="btn btn-primary btn-block btn-sm" type="button">
-                            登录 Use it
+                            登录 Use it	
+                            <!-- 主页的登录  弹出来的登录  并不是登录页面的登录 -->
+                   			<!-- 主页的登录  弹出来的登录  并不是登录页面的登录 -->
+                   			<!-- 主页的登录  弹出来的登录  并不是登录页面的登录 -->
+                   			
                         </button>
                     </div>
                     <div class="form-group">
