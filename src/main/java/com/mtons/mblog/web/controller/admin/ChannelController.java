@@ -50,6 +50,10 @@ public class ChannelController extends BaseController {
 			Channel view = channelService.getById(id);
 			model.put("view", view);
 		}
+		//   bug 描述：  /admin/channel/view 在这个路径下用户没有登录可以直接访问
+		//      *******************************
+		//      ***           bug           ***
+		//      *******************************
 		return "/admin/channel/view";
 	}
 	
