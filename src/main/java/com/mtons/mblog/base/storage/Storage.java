@@ -7,7 +7,7 @@
 |
 +---------------------------------------------------------------------------
 */
-package com.mtons.mblog.base.storages;
+package com.mtons.mblog.base.storage;
 
 import org.springframework.web.multipart.MultipartFile;
 
@@ -38,7 +38,7 @@ public interface Storage {
 	String storeScale(MultipartFile file, String basePath, int maxWidth) throws Exception;
 
 	/**
-	 * 存储压缩图片aaaa
+	 * 存储压缩图片
 	 * @param file
 	 * @param basePath
 	 * @return

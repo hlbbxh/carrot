@@ -7,7 +7,7 @@
 |
 +---------------------------------------------------------------------------
 */
-package com.mtons.mblog.base.storages;
+package com.mtons.mblog.base.storage;
 
 import com.mtons.mblog.base.storage.impl.AliyunStorageImpl;
 import com.mtons.mblog.base.storage.impl.NativeStorageImpl;
