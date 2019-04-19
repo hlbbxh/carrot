@@ -33,13 +33,13 @@ import java.util.Map;
  */
 @Slf4j
 @Component
-public class DefaultExceptionHandler implements HandlerExceptionResolver {
-	private static final String errorView = "/error";
+public class DefaultExceptionHandler implements HandlerExceptionResolver { // 实现了HandlerExceptionResolver接口
+	private static final String errorView = "/error"; //定义的全局最终变量
 	
 	@Override
 	public ModelAndView resolveException(HttpServletRequest request,
 			HttpServletResponse response, Object handler, Exception ex) {
-
+		//instanceof布尔 判断是不是谁的子类
 		if (ex instanceof IllegalArgumentException || ex instanceof IllegalStateException || ex instanceof MtonsException) {
 			log.error(ex.getMessage());
 		} else {
@@ -49,6 +49,7 @@ public class DefaultExceptionHandler implements HandlerExceptionResolver {
 		ModelAndView view = null;
 		String ret = ex.getMessage();
 		
+		//判断是不是ajax
 		if (isAjax(handler)) {
 			try {
 				response.setContentType("application/json;charset=UTF-8");
@@ -60,9 +61,9 @@ public class DefaultExceptionHandler implements HandlerExceptionResolver {
 			view = new ModelAndView();
 		} else {
 			Map<String, Object> map = new HashMap<String, Object>();  
-			map.put("error", ret);
-	        map.put("base", request.getContextPath());
-			view = new ModelAndView(errorView, map);
+			map.put("error", ret);//错误信息
+	        map.put("base", request.getContextPath());//错误路径
+			view = new ModelAndView(errorView, map);//放入error信息
 		}
 		return view;
 	}
