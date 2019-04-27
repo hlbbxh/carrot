@@ -20,9 +20,10 @@ public interface Consts {
 	String avatarPath = "/storage/avatars";
 
 	/**
-	 * 默认头像
+	 * 默认头像  zhi之前 是网址  也是可以写网址的 
+	 * https://en.gravatar.com/userimage/154673030/b9a54b5b990a61cc074668b2e2a0b8c0.png
 	 */
-	String AVATAR = "https://en.gravatar.com/userimage/154673030/b9a54b5b990a61cc074668b2e2a0b8c0.png";
+	String AVATAR = "/dist/images/def_user_pic.png";
 	
 	/**
 	 * 分隔符
