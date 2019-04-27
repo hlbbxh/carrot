@@ -33,12 +33,18 @@
                     </span>
                 </#list>
             </div>
+            
+            <#-- 这是分享该文章的操作啦   panel-footer   -->
             <div class="panel-footer">
                 <div class="hidden-xs">
-                    <div class="social-share" data-sites="qq, weibo, wechat, qzone, facebook, twitter, google"></div>
+                  <#--  <div class="social-share" data-sites="qq, weibo, wechat, qzone, facebook, twitter, google"></div>-->
+                	<p>“希望是什么?”在这之前，我根本不相信希望这种东西。但现在我相信，我相信希望是我们这个年代像钻石一样珍贵的东西!</p>
+                	<p style="text-align:right;">-- 流浪地球</p>
                 </div>
                 <div class="clearfix"></div>
             </div>
+            <#-- 这是分享该文章的操作啦   panel-footer   -->
+            
             <div class="more-box">
                 <a class="btn btn-fulltext" data-toggle="fulltext">
                     <i class="icon icon-arrow-down" aria-hidden="true"></i> 阅读全部
