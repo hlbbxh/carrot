@@ -33,16 +33,27 @@ public class RegisterController extends BaseController {
 	private UserService userService;
 	@Autowired
 	private SecurityCodeService securityCodeService;
-
+	
+	/**
+	 * 这是get请求 用于跳转到注册页面的控制器
+	 * @return
+	 */
 	@GetMapping("/register")
 	public String view() {
-		AccountProfile profile = getProfile();
-		if (profile != null) {
-			return String.format(Views.REDIRECT_USER_HOME, profile.getId());
+		AccountProfile profile = getProfile();//获取登录信息
+		if (profile != null) {//不等于空 为获取到了登录信息
+			return String.format(Views.REDIRECT_USER_HOME, profile.getId());//直接定向到当前用信息
 		}
-		return view(Views.REGISTER);
+		return view(Views.REGISTER);//为空返回注册界面 的fmk路径
 	}
 	
+	/**
+	 * 这个是   用来处理注册请求的    是一个表单的 post 方法
+	 * @param post
+	 * @param request
+	 * @param model
+	 * @return
+	 */
 	@PostMapping("/register")
 	public String register(UserVO post, HttpServletRequest request, ModelMap model) {
 		String view = view(Views.REGISTER);
@@ -57,9 +68,10 @@ public class RegisterController extends BaseController {
 			userService.register(post);
 			Result<AccountProfile> result = executeLogin(post.getUsername(), post.getPassword(), false);
 			view = String.format(Views.REDIRECT_USER_HOME, result.getData().getId());
+			//注册成功后 直接  定向到个人主页  地址 在上面拼接
 		} catch (Exception e) {
             model.addAttribute("post", post);
-			model.put("data", Result.failure(e.getMessage()));
+			model.put("data", Result.failure(e.getMessage()));//异常
 		}
 		return view;
 	}
