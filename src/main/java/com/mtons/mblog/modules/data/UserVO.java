@@ -16,27 +16,31 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
+/**
+ * 和用户类  很像了
+ * @author Gelil
+ *
+ */
 public class UserVO implements Serializable {
 	private static final long serialVersionUID = 107193816173103116L;
 
 	private long id;
-	private String username;
+	private String username;//用户名
 
 	@JSONField(serialize = false)
-	private String password;
-	private String avatar;
-	private String name;
-	private String email;
+	private String password; //密码
+	private String avatar; //头像地址
+	private String name;//名字 默认用户名
+	private String email;//游戏
 
 	private int posts; // 文章数
 	private int comments; // 发布评论数
 
-	private Date created;
-	private Date lastLogin;
+	private Date created;//创建时间
+	private Date lastLogin;//最后一次登录的时间
 	private String signature; // 个性签名
 
-	private int status;
+	private int status;//状态
 
 	@JSONField(serialize = false)
 	private List<Role> roles = new ArrayList<>();
