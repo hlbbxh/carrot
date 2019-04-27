@@ -123,12 +123,12 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     public UserVO register(UserVO user) {
-        Assert.notNull(user, "Parameter user can not be null!");
+        Assert.notNull(user, "Parameter user can not be null!");//判断实体是不是空的
 
-        Assert.hasLength(user.getUsername(), "用户名不能为空!");
-        Assert.hasLength(user.getPassword(), "密码不能为空!");
+        Assert.hasLength(user.getUsername(), "用户名不能为空!");//判断账号
+        Assert.hasLength(user.getPassword(), "密码不能为空!");//密码
 
-        User check = userRepository.findByUsername(user.getUsername());
+        User check = userRepository.findByUsername(user.getUsername());//去查找 是否已经存在改用户名
 
         Assert.isNull(check, "用户名已经存在!");
 
@@ -141,13 +141,13 @@ public class UserServiceImpl implements UserService {
         }
 
         Date now = Calendar.getInstance().getTime();
-        po.setPassword(MD5.md5(user.getPassword()));
+        po.setPassword(MD5.md5(user.getPassword()));//存进入密码md5加密
         po.setStatus(EntityStatus.ENABLED);
-        po.setCreated(now);
+        po.setCreated(now);//创建为当前时间
 
-        userRepository.save(po);
+        userRepository.save(po);//存入
 
-        return BeanMapUtils.copy(po);
+        return BeanMapUtils.copy(po);//返回当前实体
     }
 
     @Override
