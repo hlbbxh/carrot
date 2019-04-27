@@ -16,7 +16,7 @@
                         <label class="control-label" for="username">用户名</label>
                         <input class="form-control" id="username" name="username" type="text" placeholder="字母和数字的组合, 不少于5位" required>
                     </div>
-                    <@controls name="register_email_validate">
+                    <@controls name="register_email_validate"><#-- 判断是否开启 邮箱验证 注册  是在为配置文件中配置的  -->
                         <div class="form-group">
                             <label class="control-label" for="username">邮箱</label>
                             <div class="input-group">
@@ -40,7 +40,7 @@
                         <input class="form-control" id="password2" name="password2" type="password" placeholder="请再一次输入密码" maxlength="18">
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">
-                        提交
+                       快点给我注册啦
                     </button>
                 </form>
             </div>
