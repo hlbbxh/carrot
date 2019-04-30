@@ -39,6 +39,13 @@ public class ChannelController extends BaseController {
 	@Autowired
 	private PostService postService;
 	
+	/**
+	 * 导航栏的上面一排  
+	 * @param id
+	 * @param model
+	 * @param request
+	 * @return
+	 */
 	@RequestMapping("/channel/{id}")
 	public String channel(@PathVariable Integer id, ModelMap model,
 			HttpServletRequest request) {
@@ -54,17 +61,23 @@ public class ChannelController extends BaseController {
 		return view(Views.POST_INDEX);
 	}
 
-	@RequestMapping("/post/{id:\\d*}")
+	/**
+	 *  查询文章的控制器
+	 * @param id
+	 * @param model
+	 * @return
+	 */
+	@RequestMapping("/post/{id:\\d*}")//  :\\d*  匹配做少一个数字的 url 资源路径  如果输入 非数字  则不会进入该控制器
 	public String view(@PathVariable Long id, ModelMap model) {
 		PostVO view = postService.get(id);
 
 		Assert.notNull(view, "该文章已被删除");
-
 		if ("markdown".endsWith(view.getEditor())) {
 			view.setContent(MarkdownUtils.renderMarkdown(view.getContent()));
 		}
-		postService.identityViews(id);
+		postService.identityViews(id);//浏览次数 缓存
 		model.put("view", view);
 		return view(Views.POST_VIEW);
+		
 	}
 }
