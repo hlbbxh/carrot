@@ -51,7 +51,8 @@
                 </a>
             </div>
         </div>
-
+		
+		<#-- 这下面是评论部分          -->
         <!-- Comments -->
         <@controls name="comment">
         <div id="chat" class="chats shadow-box">
@@ -66,7 +67,7 @@
                 </div>
                 <div class="cbox-post">
                     <div class="cbox-input">
-                        <textarea id="chat_text" rows="3" placeholder="请输入评论内容"></textarea>
+                        <textarea id="chat_text" rows="3" placeholder="请输入评论内容"></textarea> <#-- 评论输入框 -->
                         <input type="hidden" value="0" name="chat_pid" id="chat_pid"/>
                     </div>
                     <div class="cbox-ats clearfix">
@@ -86,6 +87,8 @@
         </@controls>
         <!-- /view show -->
     </div>
+    
+    <#-- 这是 用户头像  发布 评论数   和收藏-->
     <div class="col-xs-12 col-md-3 side-right hidden-xs hidden-sm">
         <ul class="list-group about-user">
             <li class="list-group-item user-card" >
@@ -113,7 +116,7 @@
                 </div>
             </li>
         </ul>
-        <#include "/classic/inc/right.ftl"/>
+        <#include "/classic/inc/right.ftl"/> <#-- 还算包含侧边栏 -->
     </div>
 </div>
 
