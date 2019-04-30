@@ -175,16 +175,16 @@ public class PostServiceImpl implements PostService {
 	
 	@Override
 	public PostVO get(long id) {
-		Optional<Post> po = postRepository.findById(id);
-		if (po.isPresent()) {
+		Optional<Post> po = postRepository.findById(id);//具体调用的jpa查询方法
+		if (po.isPresent()) {//8 新特新  查询到 执行如下内容  
 			PostVO d = BeanMapUtils.copy(po.get());
-
+			//Optional 类是一个可以为null的容器对象。如果值存在则isPresent()方法会返回true，调用get()方法会返回该对象。
 			d.setAuthor(userService.get(d.getAuthorId()));
 			d.setChannel(channelService.getById(d.getChannelId()));
 
-			PostAttribute attr = postAttributeRepository.findById(d.getId()).get();
-			d.setContent(attr.getContent());
-			d.setEditor(attr.getEditor());
+			PostAttribute attr = postAttributeRepository.findById(d.getId()).get();//这里也有 mto_post_attribute 文章内容  
+			d.setContent(attr.getContent());//内容
+			d.setEditor(attr.getEditor());//editor  默认  markdown
 			return d;
 		}
 		return null;
