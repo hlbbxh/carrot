@@ -52,7 +52,7 @@
     <!-- content -->
     <div class="wrap">
         <!-- Main -->
-        <div class="container">
+        <div class="container"><#-- 返回的主要内容都在这个container里面 -->
             <#nested>
         </div>
     </div>
