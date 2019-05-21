@@ -20,6 +20,13 @@ java -jar hlbbxh-8887.jar --site.controls.register=false  可以切换外部参�
 nohup java -jar hlbbxh-8887.jar --site.controls.register=false &
 在后台启动 并传入参数    （先传入参数再在后面指定&）
 
+2019-05-21
+后台启动的jar 程序关闭 
+netstat -anp|grep 8887 查询端口的 应用程序
+kill 进程号即可
+
+
+
 
 
 
