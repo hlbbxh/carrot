@@ -566,7 +566,6 @@ New languages:
 New styles:
 
 - *Agate* by [Taufik Nurrohman][]
-- *Darcula* by [JetBrains][]
 - *Atelier Sulphurpool* by [Bram de Haan][]
 - *Android Studio* by [Pedro Oliveira][]
 
